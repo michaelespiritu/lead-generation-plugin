@@ -1,0 +1,17 @@
+{
+    "name": "michaelespiritu/give-me-that-data",
+    "description": "Lead Generation Plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Michael Espiritu",
+            "email": "michaelgeraldespiritu@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "GMTD\\": "./GMTD"}
+    }
+    
+}

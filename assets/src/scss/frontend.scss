@@ -1,0 +1,66 @@
+@import 'variables';
+
+#gmtd-form{
+	
+	.gmtd-fields{
+		margin-bottom: 15px;
+
+		label{
+			font-weight: bold;
+			font-family: tahoma;
+			font-size: 15px;
+		}
+
+		.input{
+
+			width: $fullwidth;
+			border-radius: 3px;
+			padding: $fullpadding;
+		    border: 1px solid #f2f2f2;
+		    background: #eee;
+		    transition: all .5s;
+
+		    &:focus{
+		    	background: $white;
+		    }
+
+		}
+
+		.error{
+			color: red;
+		}
+
+	}
+
+	input[type="submit"]{
+		padding: 15px 25px;
+		background: #000;
+		color: #fff;
+		font-size: 15px;
+		font-weight: normal;
+		&:hover,
+		&:focus{
+			background: #5f5e5e;
+		}
+	}
+	
+}
+
+.output{
+	
+    
+    color: $white;
+    margin-bottom: 15px;
+
+	.success{
+		padding: 15px;
+		background: #2be82b;
+	}
+
+	.error{
+		padding: 15px;
+		background: #e82b4e;
+	}
+}
+
+
