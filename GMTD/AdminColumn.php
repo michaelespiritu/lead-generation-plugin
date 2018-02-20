@@ -17,15 +17,18 @@ class AdminColumn{
 
   function __construct(){
 
-    add_filter('manage_client_posts_columns' , [ $this , 'add_sticky_column' ] );
-    add_action( 'manage_client_posts_custom_column' , [ $this , 'display_posts_stickiness' ], 10 , 2 );
+    add_filter('manage_client_posts_columns' , [ $this , 'add_client_column' ] );
+    add_action( 'manage_client_posts_custom_column' , [ $this , 'display_client' ], 10 , 2 );
 
   }
 
 
-  function add_sticky_column($columns) {
+  function add_client_column($columns) {
+
+   
 
     $cols = [
+        'cb' => 'cb',
         'title' => __('Name', 'GMTD'),
         'email' => __('Email', 'GMTD'),
         'date' => __('Date Created', 'GMTD'),
@@ -38,7 +41,7 @@ class AdminColumn{
 
 
 
-  function display_posts_stickiness( $column, $post_id ) {
+  function display_client( $column, $post_id ) {
 
       $client_stored_meta = get_post_meta( $post_id );
 

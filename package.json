@@ -8,7 +8,7 @@
   },
   "author": "Michael Espiritu",
   "license": "GPL-3.0",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",

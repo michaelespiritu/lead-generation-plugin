@@ -30,7 +30,7 @@ class Shortcode
 	{
 		wp_enqueue_style( 'gmtd-front-end', plugins_url( 'assets/dist/css/frontend.min.css', __DIR__ ), '', '1.0' );
 
-		wp_register_script( 'gmtd-validation',  plugins_url( 'node_modules/jquery-validation/dist/jquery.validate.min.js', __DIR__ ), array( 'jquery' ), '1.0' );
+		wp_register_script( 'gmtd-validation',  plugins_url( 'assets/dist/js/jquery.validate.min.js', __DIR__ ), array( 'jquery' ), '1.0' );
 		wp_enqueue_script( 'gmtd-validation' );
 
 		wp_register_script( 'gmtd-front-end', plugins_url( 'assets/dist/js/frontend.js', __DIR__ ), array( 'jquery' ), '1.0' );
