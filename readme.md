@@ -1,4 +1,4 @@
-#Simple Lead Generation Plugin
+# Simple Lead Generation Plugin
 
 Use shortcode [form] attributes can be set in fields of Name, Email, Phone Number, Budget, Note 
 
