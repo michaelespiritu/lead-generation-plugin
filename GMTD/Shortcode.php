@@ -43,20 +43,19 @@ class Shortcode
 		$atts = shortcode_atts( 
 			        array(
 			            'name'   => 'Name',
-			            'max_name'   => '',
 			            'email'   => 'Email',
-			            'max_email'   => '',
 			            'phonenumber'   => 'Phone Number',
-			            'max_phonenumber'   => '',
 			            'desiredbudget'   => 'Desired Budget',
-			            'max_desiredbudget'   => '',
 			            'message'   => 'Message',
-			            'max_message'   => '',
-			            'row_message'   => '2',
-			            'col_message'   => '50',
 			        ), $atts );
 
 		ob_start();
+
+		$explode_name = explode( "|", $atts[ 'name' ] );
+		$explode_email = explode( "|", $atts[ 'email' ] );
+		$explode_phonenumber = explode( "|", $atts[ 'phonenumber' ] );
+		$explode_desiredbudget = explode( "|", $atts[ 'desiredbudget' ] );
+		$explode_message = explode( "|", $atts[ 'message' ] );
 		?>
 			
 			<form id="gmtd-form" method="post" name="client-data" action="">
@@ -93,28 +92,28 @@ class Shortcode
 				?>
 
 				<div class="gmtd-fields" >
-					<label><?php echo $atts['name']; ?></label>
-					<input type="text" id="name" name="name" class="input" placeholder="<?php echo $atts['name']; ?>" maxlength="<?php echo $atts['max_name']; ?>" required>
+					<label><?php echo $explode_name[0] ?></label>
+					<input type="text" id="name" name="name" class="input" placeholder="<?php echo $explode_name[0] ?>" maxlength="<?php echo $explode_name[1] ?>" required>
 				</div>
 
 				<div class="gmtd-fields" >
-					<label><?php echo $atts['email']; ?></label>
-					<input type="email" id="email" name="email" class="input required email" placeholder="<?php echo $atts['email']; ?>" maxlength="<?php echo $atts['max_email']; ?>">
+					<label><?php echo $explode_email[0] ?></label>
+					<input type="email" id="email" name="email" class="input required email" placeholder="<?php echo $explode_email[0] ?>" maxlength="<?php echo $explode_email[1] ?>">
 				</div>
 
 				<div class="gmtd-fields" >
-					<label><?php echo $atts['phonenumber']; ?></label>
-					<input type="text" id="phonenumber" name="phonenumber" class="input required" placeholder="<?php echo $atts['phonenumber']; ?>" maxlength="<?php echo $atts['max_phonenumber']; ?>">
+					<label><?php echo $explode_phonenumber[0] ?></label>
+					<input type="text" id="phonenumber" name="phonenumber" class="input required" placeholder="<?php echo $explode_phonenumber[0] ?>" maxlength="<?php echo $explode_phonenumber[1] ?>">
 				</div>
 
 				<div class="gmtd-fields" >
-					<label><?php echo $atts['desiredbudget']; ?></label>
-					<input type="text" id="desiredbudget" name="desiredbudget" class="input required" placeholder="<?php echo $atts['desiredbudget']; ?>" maxlength="<?php echo $atts['max_desiredbudget']; ?>">
+					<label><?php echo $explode_desiredbudget[0] ?></label>
+					<input type="text" id="desiredbudget" name="desiredbudget" class="input required" placeholder="<?php echo $explode_desiredbudget[0] ?>" maxlength="<?php echo $explode_desiredbudget[1] ?>">
 				</div>
 
 				<div class="gmtd-fields" >
-					<label><?php echo $atts['message']; ?></label>
-					<textarea maxlength="<?php echo $atts['max_message']; ?>" id="message" class="input required" rows="<?php echo $atts['row_message']; ?>" cols="<?php echo $atts['col_message']; ?>"></textarea>
+					<label><?php echo $explode_message[0] ?></label>
+					<textarea maxlength="<?php echo $explode_message[1] ?>" id="message" class="input required" rows="<?php echo $explode_message[2] ?>" cols="<?php echo $explode_message[3] ?>"></textarea>
 				</div>
 
 
